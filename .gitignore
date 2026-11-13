@@ -1,0 +1,12 @@
+node_modules/
+.next/
+out/
+todos.db
+todos.db-wal
+todos.db-shm
+.env.local
+playwright-report/
+test-results/
+next-env.d.ts
+*.tsbuildinfo
+
