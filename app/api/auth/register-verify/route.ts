@@ -50,7 +50,10 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: true, user: { id: user.id, username: user.username } });
   } catch (err) {
     console.error('register-verify error:', err);
-    return NextResponse.json({ error: 'Registration failed' }, { status: 500 });
+    return NextResponse.json(
+      { error: (err as Error).message || 'Registration failed' },
+      { status: 400 }
+    );
   }
 }
 
